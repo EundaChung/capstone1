@@ -5,14 +5,15 @@ import com.example.capstone1.dto.UserDto;
 import com.example.capstone1.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-@RequestMapping("/api/User")
+@RequestMapping("/api/user")
 @RestController
 public class UserRestController {
-    private final UserService userService;
 
+    private final UserService userService;
     public UserRestController(
             UserService userService
     ) {
