@@ -12,8 +12,8 @@ import java.util.List;
 @RequestMapping("/api/faq")
 @RestController
 public class FaqRestController {
-    private final FaqService faqService;
 
+    private final FaqService faqService;
     public FaqRestController(
             FaqService faqService
     ) {
@@ -21,7 +21,6 @@ public class FaqRestController {
     }
 
     /**/
-
     @PostMapping("")
     public ResponseEntity<DefaultDto.CreateResDto> create(@RequestBody FaqDto.CreateReqDto param){
         return ResponseEntity.ok(faqService.create(param));

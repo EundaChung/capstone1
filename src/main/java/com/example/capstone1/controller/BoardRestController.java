@@ -24,10 +24,12 @@ public class BoardRestController {
 
     @GetMapping("/list")
     public List<Board> list(){
+
         return boardService.listBoard();
 }
     @GetMapping("/detail")
     public Board detail(@RequestParam Integer id){
+
         return boardService.detailBoard(id);
     }
 
