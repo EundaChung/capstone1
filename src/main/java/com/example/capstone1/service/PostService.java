@@ -2,7 +2,6 @@ package com.example.capstone1.service;
 
 import com.example.capstone1.dto.DefaultDto;
 import com.example.capstone1.dto.PostDto;
-import com.example.capstone1.dto.PostDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,6 +1,5 @@
 package com.example.capstone1.dto;
 
-import com.example.capstone1.domain.Post;
 import com.example.capstone1.domain.Postimg;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,7 +25,6 @@ public class PostimgDto {
     public static class CreateResDto extends DefaultDto.CreateResDto {
         private String url;
     }
-
     @AllArgsConstructor @NoArgsConstructor @SuperBuilder @Setter @Getter
     public static class UpdateReqDto extends DefaultDto.UpdateReqDto {
         private Long postId;
@@ -54,6 +52,3 @@ public class PostimgDto {
     }
 
 }
-
-
-

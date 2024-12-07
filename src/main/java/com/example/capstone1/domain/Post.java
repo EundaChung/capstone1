@@ -9,9 +9,9 @@ import lombok.Setter;
 @Getter
 @Entity
 public class Post extends AuditingFields{
-    @Setter @Column(nullable = false)
+    @Setter @Column(nullable=false)
     String title;
-    @Setter @Column(nullable = true)
+    @Setter @Column(nullable=true)
     String content;
 
     protected Post(){}
@@ -21,12 +21,11 @@ public class Post extends AuditingFields{
         this.content = content;
     }
 
-
     public static Post of(String title, String content){
         return new Post(false, title, content);
     }
+
     public DefaultDto.CreateResDto toCreateResDto() {
         return DefaultDto.CreateResDto.builder().id(getId()).build();
     }
 }
-

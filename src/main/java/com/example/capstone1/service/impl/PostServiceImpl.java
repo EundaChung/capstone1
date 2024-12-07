@@ -23,7 +23,7 @@ public class PostServiceImpl implements PostService {
     private final PostMapper postMapper;
     public PostServiceImpl(
             PostRepository postRepository
-            ,PostimgService postimgService
+            , PostimgService postimgService
             , PostMapper postMapper
     ) {
         this.postRepository = postRepository;
@@ -40,10 +40,11 @@ public class PostServiceImpl implements PostService {
 
         List<MultipartFile> imgs = param.getImgs();
         if(imgs != null && !imgs.isEmpty()) {
-            for (MultipartFile each : imgs) {
+            for(MultipartFile each : imgs){
                 postimgService.create(PostimgDto.CreateReqDto.builder().postId(res.getId()).imgfile(each).build());
             }
         }
+
         return res;
     }
     @Override
